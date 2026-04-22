@@ -95,7 +95,7 @@ body {
     background: var(--blue);
     box-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue-glow);
     animation: splashFillBar 5.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
-  }
+}
 
 .bar-fill::after {
     content: '';
@@ -125,7 +125,7 @@ body {
     cursor: pointer;
     animation: splashPromptAppear 0.1s steps(1) 5.7s forwards, splashBlink 1s steps(1) 5.7s infinite;
     text-shadow: 0 0 8px var(--blue-glow);
-  }
+}
 
 .splash-enter:hover {
     color: #1e2340;
@@ -139,11 +139,22 @@ body {
 }
 
 @keyframes splashFillBar {
-    0%   { width: 0%; }
-    50%  { width: 63%; }
-    80%  { width: 84%; }
-    100% { width: 100%; }
-  }
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 63%;
+    }
+
+    80% {
+        width: 84%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
 
 @keyframes splashFlicker {
 
@@ -1499,4 +1510,139 @@ body {
 .p6-home-btn svg path {
     fill: var(--ink);
     transition: fill 0.2s;
+}
+
+/* For media 480px or lower (phone users) ------------------------------ */
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 18vw;
+    }
+
+    .tagline {
+        font-size: 3.8vw;
+    }
+
+    .hamburger .h-line {
+        width: 36px;
+        height: 2.5px;
+    }
+
+    .nav-controls {
+        gap: 10px;
+    }
+
+    .dot-light {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dot-dark {
+        width: 24px;
+        height: 24px;
+    }
+
+    #app.dark .dot-light {
+        width: 24px;
+        height: 24px;
+    }
+
+    #app.dark .dot-dark {
+        width: 18px;
+        height: 18px;
+    }
+
+    .bunny-img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+    }
+
+    .question {
+        font-size: 6.5vw;
+    }
+
+    .cta-btn {
+        font-size: 5.5vw;
+        padding: 14px 0;
+        width: 55%;
+    }
+
+    .site-url {
+        font-size: 3vw;
+    }
+
+    .p3-btn {
+        font-size: 4vw;
+        padding: 11px 0;
+    }
+
+    .p4-text {
+        font-size: 8.5vw;
+    }
+
+    .p4-btn {
+        font-size: 5.5vw;
+    }
+
+    .p5-label {
+        font-size: 5.5vw;
+    }
+
+    .p5-sublabel {
+        font-size: 3vw;
+    }
+
+    .p5-step {
+        font-size: 3.8vw;
+        padding: 12px 0;
+    }
+
+    .p6-total {
+        font-size: 16vw;
+    }
+
+    .p6-cat-name,
+    .p6-cat-amount {
+        font-size: 3.8vw;
+    }
+
+    .p6-cat-note {
+        font-size: 3vw;
+    }
+
+    .p6-share-btn {
+        font-size: 5vw;
+        width: 55%;
+    }
+
+    .splash-title {
+        font-size: 8vw;
+    }
+
+    .splash-status {
+        font-size: 3vw;
+    }
+
+    .splash-enter {
+        font-size: 3.2vw;
+    }
+
+    .about-title {
+        font-size: 12vw;
+    }
+
+    .about-body {
+        font-size: 3.8vw;
+    }
+
+    .about-stat-num {
+        font-size: 7vw;
+    }
+
+    .about-stat-label,
+    .about-footer,
+    .about-contact-link {
+        font-size: 3vw;
+    }
 }
