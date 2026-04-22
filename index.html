@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>NU:ll</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--Splash Screen ---------------------------------------------------------------------------------------- -->
+  <div id="splash">
+    <div class="splash-title">NU:LL</div>
+    <div class="bar-wrap">
+      <div class="bar-track">
+        <div class="bar-fill"></div>
+      </div>
+    </div>
+    <div class="splash-status" id="splashStatus">Initializing...</div>
+    <div class="splash-enter" id="splashEnter" onclick="splashEnter()">[ Press any key to enter ]</div>
+  </div>
+
+  <div id="app">
+
+    <!--PAGE 1: HOME/LANDING PAGE ---------------------------------------------------------------------------------------- -->
+    <div class="page visible" id="page1">
+
+      <!--About Page ---------------------------------------------------------------------------------------- -->
+      <div class="about-panel" id="aboutPanel">
+        <div class="about-close" id="aboutClose"></div>
+        <div class="about-scroll">
+          <div class="about-label">About</div>
+          <div class="about-title">NU:ll</div>
+          <div class="about-divider"></div>
+          <div class="about-body">
+            <p>NU:ll is a simulated financial awareness experience.</p>
+            <p>This project is designed to confront the hidden costs of digital spending.</p>
+            <p>By simulating the data-access patterns of the apps and platforms we use every day, NULL reveals what
+              impulse purchasing actually adds up to, broken down by category and harder to ignore than you'd expect.
+            </p>
+            <p>NULL exposes the psychology behind "it's just a small purchase" culture and their one tap payments, the
+              algorithm-driven recommendations, the way digital money never quite feels real.</p>
+            <p>Recognizing the manipulation is the first step to spending on your own terms.</p>
+            <p>No real data is collected. Everything you see is generated to feel uncomfortably close to real.</p>
+          </div>
+
+          <div class="about-stat-row">
+            <div class="about-stat">
+              <div class="about-stat-num">$847</div>
+              <div class="about-stat-label">avg. 90-day nonessential spend</div>
+            </div>
+
+            <div class="about-stat">
+              <div class="about-stat-num">62%</div>
+              <div class="about-stat-label">of items forgotten within a week</div>
+            </div>
+          </div>
+
+          <div class="about-contact">
+            <a href="mailto:wendywijaya@ocadu.ca" class="about-contact-link">wendywijaya@ocadu.ca</a>
+            <a href="https://www.instagram.com/wendyywijaya/" class="about-contact-link" target="_blank">@wendyywijaya</a>
+          </div>
+
+          <div class="about-footer">
+            <span>A financial awareness project · NULL.co</span>
+            <span>Wendy Wijaya · ©2026</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!--Navigation for 'About Button' / Hamburger Button ---------------------------------------------------------------------------------------- -->
+      <div class="top-row">
+        <div class="logo-block">
+          <div class="logo">NU:ll</div>
+          <div class="tagline">A simulated look at where your money quietly disappears to.</div>
+        </div>
+        <div class="nav-controls">
+          <div class="hamburger" id="hamburger">
+            <span class="h-line"></span>
+            <span class="h-line"></span>
+            <span class="h-line"></span>
+          </div>
+          <div class="dot-light" id="dotLight" title="Light mode"></div>
+          <div class="dot-dark" id="dotDark" title="Dark mode"></div>
+        </div>
+      </div>
+
+      <div class="image-area">
+        <img class="bunny-img" src="Images/bunny.png" alt="Jellycat-blur">
+      </div>
+
+      <div class="bottom-section">
+        <div class="question">How big is your spending problem?</div>
+        <button class="cta-btn" id="seeBtn">See</button>
+        <div class="site-url">NULL.co</div>
+      </div>
+
+    </div>
+
+    <!--PAGE 2: BUFFER / LOADING SCREEN ---------------------------------------------------------------------------------------- -->
+    <div class="page hidden-right" id="page2">
+      <div class="buffer-inner">
+        <img class="buffer-logo" id="bufferLogo" src="Images/logo.png" alt="NU:ll">
+        <div class="buffer-text" id="bufferText">
+          We analyzed how trend-driven shoppers really spend. The results may be uncomfortable yet illuminating.
+        </div>
+      </div>
+      <div class="buffer-url">NULL.co</div>
+    </div>
+
+    <!--PAGE 3: PERMISSION PAGE ---------------------------------------------------------------------------------------- -->
+    <div class="page hidden-right" id="page3">
+      <div class="p3-inner">
+
+        <img class="p3-logo" id="p3Logo" src="Images/logo.png" alt="NU:ll">
+
+        <div class="p3-heading" id="p3Heading">NU:LL would like to access your accounts</div>
+
+        <div class="p3-sub" id="p3Sub">To show your spending breakdown, we'll need a quick look at your activity.</div>
+
+        <div class="p3-box" id="p3Box">
+          <div class="p3-scroll">
+
+            <div class="perm-group">
+              <div class="perm-title"><span class="perm-check">✓</span> Connected shopping apps</div>
+              <ul class="perm-items">
+                <li>Purchase history</li>
+                <li>Order confirmations</li>
+                <li>Cart activity</li>
+              </ul>
+            </div>
+
+            <div class="perm-group">
+              <div class="perm-title"><span class="perm-check">✓</span> Financial &amp; transaction data</div>
+              <ul class="perm-items">
+                <li>Transaction amounts</li>
+                <li>Credit card transactions</li>
+                <li>Other balances</li>
+              </ul>
+            </div>
+
+            <div class="perm-group">
+              <div class="perm-title"><span class="perm-check">✓</span> Email &amp; receipt data</div>
+              <ul class="perm-items">
+                <li>Email receipts</li>
+              </ul>
+            </div>
+
+            <div class="perm-group">
+              <div class="perm-title"><span class="perm-check">✓</span> Browsing &amp; activity data</div>
+              <ul class="perm-items">
+                <li>Browsing history</li>
+                <li>App usage patterns</li>
+                <li>Interaction data (likes, saves, shares)</li>
+              </ul>
+            </div>
+
+            <div class="perm-group">
+              <div class="perm-title"><span class="perm-check">✓</span> Preferences &amp; advertising</div>
+              <ul class="perm-items">
+                <li>Ad engagement</li>
+                <li>Preference indicators</li>
+              </ul>
+            </div>
+
+            <div class="perm-group">
+              <div class="perm-title"><span class="perm-check">✓</span> Device &amp; location data</div>
+              <ul class="perm-items">
+                <li>Location data</li>
+                <li>Device information</li>
+              </ul>
+            </div>
+
+            <div class="perm-group">
+              <div class="perm-title"><span class="perm-check">✓</span> Cross-platform &amp; external data</div>
+              <ul class="perm-items">
+                <li>Cross-platform activity</li>
+                <li>Other purchase histories</li>
+                <li>Other shopping apps</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="p3-disclaimer" id="p3Disc">This is a simulated experience. No real data is collected.<br>NU:LL is an
+          overconsumption awareness project.</div>
+
+        <div class="p3-btns" id="p3Btns">
+          <button class="p3-btn" id="allowBtn">Allow Access</button>
+          <button class="p3-btn outline" id="notNowBtn">Not Now</button>
+        </div>
+
+        <div class="p3-url" id="p3Url">NULL.co</div>
+
+      </div>
+    </div>
+
+    <!--PAGE 4: BACKUP IF NO ---------------------------------------------------------------------------------------- -->
+    <div class="page hidden-right" id="page4">
+      <div class="p4-inner">
+        <div class="p4-text" id="p4Text">You kind of have to at this point...</div>
+        <button class="p4-btn" id="p4AllowBtn">Allow Access</button>
+        <div class="p4-url">NULL.co</div>
+      </div>
+    </div>
+
+    <!--PAGE 5: SCANNING PAGE ---------------------------------------------------------------------------------------- -->
+    <div class="page hidden-right" id="page5">
+      <div class="p5-inner">
+        <div class="p5-ring-wrap">
+          <div class="p5-ring"></div>
+          <img class="p5-logo" id="p5Logo" src="Images/logo.png" alt="NU:ll">
+        </div>
+        <div class="p5-label">Scanning your receipts...</div>
+        <div class="p5-sublabel">PROCESSING YOUR DATA</div>
+        <div class="p5-steps" id="p5Steps">
+          <div class="p5-step">Collecting...</div>
+          <div class="p5-step">Reading...</div>
+          <div class="p5-step">Judging...</div>
+          <div class="p5-step">Oh wow...</div>
+          <div class="p5-step">Calculating...</div>
+        </div>
+        <div class="p5-almost" id="p5Almost">Almost Finished...</div>
+        <div class="p5-url">NULL.co</div>
+      </div>
+    </div>
+
+    <!--PAGE 6: THE RESULTS - END PAGE ---------------------------------------------------------------------------------------- -->
+    <div class="page hidden-right" id="page6">
+      <div class="p6-inner">
+        <div class="p6-header">
+          <img class="p6-header-logo" id="p6HeaderLogo" src="Images/logo.png" alt="NU:ll">
+          <div class="p6-header-text">Spending from the last 360 days ·<br>Nonessential only ·</div>
+        </div>
+        <div class="p6-total" id="p6Total"><span class="dollar">$</span> 0</div>
+        <div class="p6-scroll">
+          <div id="p6Cards"></div>
+        </div>
+        <div class="p6-insight" id="p6Insight">
+          <div class="p6-insight-label">Insight!</div>
+          <div class="p6-insight-text" id="p6InsightText"></div>
+        </div>
+        <div class="p6-share-wrap">
+          <div class="p6-btn-row">
+            <button class="p6-share-btn" id="p6ShareBtn">Share?</button>
+            <button class="p6-home-btn" id="p6HomeBtn" title="Back to start">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+              </svg>
+            </button>
+          </div>
+          <div class="p6-url-foot">NULL.co</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>

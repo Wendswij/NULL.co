@@ -1,0 +1,6 @@
+Credits and links that helped made this simulation:
+
+https://www.w3schools.com
+https://www.w3schools.com/js/
+https://web.dev/learn/javascript/welcome?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fjavascript%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fjavascript%2Fwelcome
+https://youtu.be/EerdGm-ehJQ?si=XMq_8_s6HHeffAdu
